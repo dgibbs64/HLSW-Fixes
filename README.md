@@ -40,6 +40,6 @@ Make sure you have HLSW v1.4.0.5 installed
 
 3. Make sure you have HLSW v1.4.0.5 installed (installer provided).
 
-4. Copy the contents of the hlsw to your HLSW directory. 
+4. Copy the contents of the hlsw directory to your HLSW directory. 
 
 C:\Program Files (x86)\HLSW
