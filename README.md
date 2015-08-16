@@ -1,10 +1,11 @@
 # hlsw-fixes
 Fixes and adds a few HL2 Mod Games in HLSW
 ## Adds support for new HL2 Mod Servers in HLSW
-* No More Room in Hell
-* Double Action: Boogaloo
 * Black Mesa: Deathmatch
 * Contagion
+* Counter Strike: Global Offensive
+* Double Action: Boogaloo
+* No More Room in Hell
 
 ## Fixes HLSW bugs
 * Fixes Rcon not working for NMRIH and others
