@@ -1,6 +1,6 @@
 <img src="http://i.imgur.com/en0nTvp.png">
 <h1>HLSW-FIXES</h1>
-Fixes and adds a few new servers in HLSW.
+Unofficial fixes and adds a few new servers in HLSW.
 ## Adds support for new Servers in HLSW
 * 7 Days to Die
 * ARK: Survival Evolved
