@@ -1,14 +1,29 @@
 # hlsw-fixes
 Fixes and adds a few HL2 Mod Games in HLSW
-## Adds support for new HL2 Mod Servers in HLSW
+## Adds support for new Servers in HLSW
+* 7 Days to Die
+* ARK: Survival Evolved
 * Black Mesa: Deathmatch
 * Contagion
 * Counter Strike: Global Offensive
+* Dota 2
 * Double Action: Boogaloo
+* Fistful of Frags
+* Homefront
+* Just Cause 2
+* Killing Floor 2
+* Natural Selection 2
 * No More Room in Hell
+* Rust
+* Sniper Elite v2
+* Sniper Elite 3
+* Space Engineers
+* Starbound
+
+note: not all servers may be fully functioning. Although the HLSW fixes will detect the server, rcon may not work. If the game engine is source it should work but others may not (its worth testing and letting me know).
 
 ## Fixes HLSW bugs
-* Fixes Rcon not working for NMRIH and others
+* Fixes Rcon not working for source engine servers.
 
 Without fix
 
