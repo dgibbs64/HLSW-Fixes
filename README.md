@@ -1,5 +1,5 @@
 # hlsw-fixes
-Fixes and adds a few HL2 Mod Games in HLSW
+Fixes and adds a few new servers in HLSW.
 ## Adds support for new Servers in HLSW
 * 7 Days to Die
 * ARK: Survival Evolved
