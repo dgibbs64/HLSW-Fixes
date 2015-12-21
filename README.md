@@ -11,6 +11,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Double Action: Boogaloo
 * Fistful of Frags
 * Homefront
+* Hurtworld
 * Just Cause 2
 * Killing Floor 2
 * Natural Selection 2
