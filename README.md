@@ -63,6 +63,18 @@ Make sure you have HLSW v1.4.0.5 installed
 
 C:\Program Files (x86)\HLSW
 
+## Query Port
+Some servers require you to know te query port as well as the game port.
+
+example usage 
+
+[IP address]:[game port]:[query port]
+127.0.0.0:12871:12881
+
+I am aware that the following require this:
+* 7 Days to Die
+* Hurtworld 
+
 ## Links
 <a href="https://github.com/dgibbs64/hlsw-fixes">https://github.com/dgibbs64/hlsw-fixes</a>
 <a href="https://forums.alliedmods.net/showthread.php?t=269963">https://forums.alliedmods.net/showthread.php?t=269963</a>
