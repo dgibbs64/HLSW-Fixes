@@ -39,9 +39,11 @@ With fix
 * Fixes HL2 Servers being auto-detected as HL servers.
 
 Without fix
+
  <img src="http://i.imgur.com/dFaZ3MP.png" alt="hl2-nofix" />
 
 With fix
+
 <img src="http://i.imgur.com/IxuHs5q.png" alt="hl2-fix" />
 
 ### Fix as per these posts
