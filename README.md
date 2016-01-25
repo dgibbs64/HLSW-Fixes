@@ -12,12 +12,14 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Dota 2
 * Double Action: Boogaloo
 * Fistful of Frags
+* GoldenEye: Source
 * Homefront
 * Hurtworld
 * Just Cause 2
 * Killing Floor 2
 * Natural Selection 2
 * No More Room in Hell
+* Nuclear Dawn
 * Rust
 * Sniper Elite v2
 * Sniper Elite 3
@@ -78,6 +80,7 @@ example usage
 I am aware that the following require this:
 * 7 Days to Die
 * Hurtworld 
+* Natural Selection 2 (QueryPort= GamePort+1)
 
 ## Links
 <a href="https://github.com/dgibbs64/hlsw-fixes">https://github.com/dgibbs64/hlsw-fixes</a>
