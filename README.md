@@ -5,6 +5,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 ## Adds support for new Servers in HLSW
 * 7 Days to Die
 * ARK: Survival Evolved
+* Arma 3
 * Black Mesa: Deathmatch
 * BrainBread 2
 * Contagion
