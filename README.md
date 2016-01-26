@@ -12,6 +12,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Counter Strike: Global Offensive
 * Dota 2
 * Double Action: Boogaloo
+* Dystopia
 * Fistful of Frags
 * GoldenEye: Source
 * Homefront
@@ -19,6 +20,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Just Cause 2
 * Killing Floor 2
 * Natural Selection 2
+* NEOTOKYO
 * No More Room in Hell
 * Nuclear Dawn
 * Pirates, Knights & Knights II
