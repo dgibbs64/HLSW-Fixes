@@ -23,6 +23,8 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Nuclear Dawn
 * Pirates, Knights & Knights II
 * Rust
+* Serious Sam 3
+* Serious Sam HD
 * Sniper Elite v2
 * Sniper Elite 3
 * Space Engineers
