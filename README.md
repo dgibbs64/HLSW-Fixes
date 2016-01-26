@@ -26,6 +26,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Sniper Elite v2
 * Sniper Elite 3
 * Space Engineers
+* Sven Co-op
 * Starbound
 
 note: not all servers may be fully functioning. Although the HLSW fixes will detect the server, rcon may not work. If the game engine is source it should work but others may not (its worth testing and letting me know).
