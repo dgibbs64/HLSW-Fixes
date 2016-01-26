@@ -20,6 +20,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Natural Selection 2
 * No More Room in Hell
 * Nuclear Dawn
+* Pirates, Knights & Knights II
 * Rust
 * Sniper Elite v2
 * Sniper Elite 3
