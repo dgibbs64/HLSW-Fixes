@@ -10,6 +10,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Arma 3
 * Black Mesa: Deathmatch
 * BrainBread 2
+* Codename CURE
 * Contagion
 * Counter Strike: Global Offensive
 * Dota 2
