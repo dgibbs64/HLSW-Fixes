@@ -5,12 +5,14 @@ Website: <a href="https://hlswfixes.com/">https://hlswfixes.com</a>
 <img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw-29.jpg" alt="hlsw-29" width="700" height="554" class="alignnone size-full wp-image-4021" />
 An unofficial patch to HLSW that adds a few fixes and more supported servers.
 ## Adds support for new Servers in HLSW
+
 * 7 Days to Die
 * ARK: Survival Evolved
 * Arma 3
 * Black Mesa: Deathmatch
 * BrainBread 2
-* Codename CURE
+* Chivalry: Medieval Warfare
+* Codename Cure
 * Contagion
 * Counter Strike: Global Offensive
 * Day of Infamy
@@ -21,8 +23,10 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * GoldenEye: Source
 * Homefront
 * Hurtworld
+* Insurgency
 * Just Cause 2
 * Killing Floor 2
+* Medieval Engineers
 * Natural Selection 2
 * NEOTOKYO
 * No More Room in Hell
@@ -40,7 +44,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * The Ship
 * War of the Roses
 
-note: not all servers may be fully functioning. Although the HLSW fixes will detect the server, rcon may not work. If the game engine is source it should work but others may not (its worth testing and letting me know).
+note: not all servers may not be fully functioning. Although the HLSW fixes will detect the server, rcon may not work. If the game engine is source it should work but others may not (its worth testing and letting me know).
 
 ## Fixes HLSW Bugs
 * Fixes Rcon not working for source engine servers.
