@@ -1,8 +1,8 @@
-Website: <a href="http://hlswfixes.com/">http://hlswfixes.com</a>
+Website: <a href="https://hlswfixes.com/">https://hlswfixes.com</a>
 
-<img src="http://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw_logo.png" alt="hlsw_logo" width="176" height="41" class="alignnone size-full wp-image-4024" />
+<img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw_logo.png" alt="hlsw_logo" width="176" height="41" class="alignnone size-full wp-image-4024" />
 
-<img src="http://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw-29.jpg" alt="hlsw-29" width="700" height="554" class="alignnone size-full wp-image-4021" />
+<img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw-29.jpg" alt="hlsw-29" width="700" height="554" class="alignnone size-full wp-image-4021" />
 An unofficial patch to HLSW that adds a few fixes and more supported servers.
 ## Adds support for new Servers in HLSW
 * 7 Days to Die
@@ -13,6 +13,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Codename CURE
 * Contagion
 * Counter Strike: Global Offensive
+* Day of Infamy
 * Dota 2
 * Double Action: Boogaloo
 * Dystopia
@@ -85,14 +86,14 @@ C:\Program Files (x86)\HLSW
 ## Query Port
 Some servers require you to know te query port as well as the game port.
 
-example usage 
+example usage
 
 [IP address]:[game port]:[query port]
 127.0.0.0:12871:12881
 
 I am aware that the following require this:
 * 7 Days to Die
-* Hurtworld 
+* Hurtworld
 * Natural Selection 2 (QueryPort= GamePort+1)
 
 ## Links
