@@ -19,6 +19,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * Dota 2
 * Double Action: Boogaloo
 * Dystopia
+* Empires
 * Fistful of Frags
 * GoldenEye: Source
 * Homefront
