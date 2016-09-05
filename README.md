@@ -9,6 +9,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * 7 Days to Die
 * ARK: Survival Evolved
 * Arma 3
+* Blade Symphony
 * Black Mesa: Deathmatch
 * BrainBread 2
 * Chivalry: Medieval Warfare
