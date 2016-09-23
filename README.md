@@ -3,6 +3,7 @@ Website: <a href="https://hlswfixes.com/">https://hlswfixes.com</a>
 <img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw_logo.png" alt="hlsw_logo" width="176" height="41" class="alignnone size-full wp-image-4024" />
 
 <img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw-29.jpg" alt="hlsw-29" width="700" height="554" class="alignnone size-full wp-image-4021" />
+<br>
 An unofficial patch to HLSW that adds a few fixes and more supported servers.
 ## Adds support for new Servers in HLSW
 
@@ -104,4 +105,5 @@ I am aware that the following require this:
 
 ## Links
 <a href="https://github.com/dgibbs64/hlsw-fixes">https://github.com/dgibbs64/hlsw-fixes</a>
+<br>
 <a href="https://forums.alliedmods.net/showthread.php?t=269963">https://forums.alliedmods.net/showthread.php?t=269963</a>
