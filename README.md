@@ -100,6 +100,7 @@ example usage
 
 I am aware that the following require this:
 * 7 Days to Die
+* Battlefield: Bad Company 2
 * Hurtworld
 * Natural Selection 2 (QueryPort= GamePort+1)
 
