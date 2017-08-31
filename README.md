@@ -5,7 +5,8 @@ Website: <a href="https://hlswfixes.com/">https://hlswfixes.com</a>
 <img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw-29.jpg" alt="hlsw-29" width="700" height="554" class="alignnone size-full wp-image-4021" />
 <br>
 An unofficial patch to HLSW that adds a few fixes and more supported servers.
-## Adds support for new Servers in HLSW
+
+# Adds Support for New Servers
 
 * 7 Days to Die
 * ARK: Survival Evolved
@@ -49,7 +50,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 
 note: not all servers may not be fully functioning. Although the HLSW fixes will detect the server, rcon may not work. If the game engine is source it should work but others may not (its worth testing and letting me know).
 
-## Fixes HLSW Bugs
+# Fixes HLSW Bugs
 * Fixes Rcon not working for source engine servers.
 
 Without fix
@@ -70,13 +71,11 @@ With fix
 
 <img src="http://i.imgur.com/IxuHs5q.png" alt="hl2-fix" />
 
-### Fix as per these posts
-
 I stumbled across these posted that related to this issue. They resolved the problem and I decided to put these fixes in to an easy to use patch.
 * http://www.nomoreroominhell.com/forums/index.php?showtopic=12214
 * http://steamcommunity.com/app/222880/discussions/2/35220315821929357
 
-## Install
+# Install
 
 Make sure you have HLSW v1.4.0.5 installed
 
