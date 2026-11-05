@@ -1,9 +1,5 @@
-Website: <a href="https://hlswfixes.com/">https://hlswfixes.com</a>
+# HLSW Fixes
 
-<img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw_logo.png" alt="hlsw_logo" width="176" height="41" class="alignnone size-full wp-image-4024" />
-
-<img src="https://danielgibbs.co.uk/wp-content/uploads/2015/08/hlsw-29.jpg" alt="hlsw-29" width="700" height="554" class="alignnone size-full wp-image-4021" />
-<br>
 An unofficial patch to HLSW that adds a few fixes and more supported servers.
 
 # Adds Support for New Servers
@@ -48,7 +44,7 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 * The Ship
 * War of the Roses
 
-note: not all servers may not be fully functioning. Although the HLSW fixes will detect the server, rcon may not work. If the game engine is source it should work but others may not (its worth testing and letting me know).
+Note: not all of these may be fully working. HLSW will detect the server, but rcon may not work. Source engine games should work, others may not (it's worth testing and letting me know).
 
 # Fixes HLSW Bugs
 * Fixes Rcon not working for source engine servers.
@@ -77,31 +73,34 @@ I stumbled across these posted that related to this issue. They resolved the pro
 
 # Install
 
-Make sure you have HLSW v1.4.0.5 installed
-
 1. Download this project <a href="https://github.com/dgibbs64/hlsw-fixes/archive/master.zip">here</a>.
 
-2. Unzip the archive
+2. Unzip the archive.
 
-3. Make sure you have HLSW v1.4.0.5 installed (installer provided).
+3. Make sure you have HLSW v1.4.0.5 installed (`hlsw_1_4_0_5_setup.exe` is included).
 
-4. Copy the contents of the hlsw directory to your HLSW directory.
-
-C:\Program Files (x86)\HLSW
+4. Copy the contents of the hlsw directory to your HLSW directory, usually `C:\Program Files (x86)\HLSW`.
 
 ## Query Port
-Some servers require you to know te query port as well as the game port.
+Some servers need the query port as well as the game port.
 
-example usage
+Example usage:
 
+```
 [IP address]:[game port]:[query port]
-127.0.0.0:12871:12881
+127.0.0.1:12871:12881
+```
 
 I am aware that the following require this:
 * 7 Days to Die
 * Battlefield: Bad Company 2
 * Hurtworld
 * Natural Selection 2 (QueryPort= GamePort+1)
+
+## Known Limits
+HLSW's own online services are gone, and these fixes cannot bring them back:
+* Logging in does not work. Click Offline on the login window.
+* The global and official internet server lists are empty. Add servers by IP address to your custom server list instead.
 
 ## Links
 <a href="https://github.com/dgibbs64/hlsw-fixes">https://github.com/dgibbs64/hlsw-fixes</a>
