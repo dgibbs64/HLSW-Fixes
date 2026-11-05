@@ -28,7 +28,7 @@ jobs:
         run: make -C shim install
 
       - name: Check the DLL is a 32-bit Windows DLL
-        run: file hlsw/wsock32.dll | tee /dev/stderr | grep -q "PE32 executable (DLL).*Intel 80386"
+        run: file hlsw/wsock32.dll | tee /dev/stderr | grep -qE "PE32 executable.*DLL.*(80386|i386)"
 
       - name: Package
         run: |
