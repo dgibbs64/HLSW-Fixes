@@ -75,6 +75,14 @@ I stumbled across these posted that related to this issue. They resolved the pro
 * http://www.nomoreroominhell.com/forums/index.php?showtopic=12214
 * http://steamcommunity.com/app/222880/discussions/2/35220315821929357
 
+* Fixes Source servers showing as Timeout after Valve added a challenge to A2S_INFO queries (2020/2021).
+
+Updated Source servers now reply to a server info query with a challenge number and only answer once the query is sent again with that number attached. HLSW does not know about this, so those servers stay on Timeout. The `wsock32.dll` in the hlsw directory sits between HLSW and Windows networking and resends the query with the challenge for it. Nothing else about HLSW changes. To remove it, delete `wsock32.dll` from your HLSW directory.
+
+To troubleshoot, create an empty file called `wsock32_a2s.log` next to `hlsw.exe` to log each challenge it answers, or `wsock32_a2s_verbose.log` to log every packet as well.
+
+The source is in the `shim` directory. It builds with mingw-w64 on Linux: `cd shim && make install`.
+
 # Install
 
 Make sure you have HLSW v1.4.0.5 installed
