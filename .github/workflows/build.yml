@@ -1,0 +1,65 @@
+name: Build
+
+on:
+  push:
+    branches: [master]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  INSTALLER_NAME: hlsw_1_4_0_5_setup.exe
+  INSTALLER_URL: https://github.com/dgibbs64/HLSW-Fixes/raw/013fa93e91066f7dfb5fbab383c4d93409e8a1cf/hlsw_1_4_0_5_setup.exe
+  INSTALLER_SHA256: 525b20c89b585704067bb38ae65ff817c2753bd20d680361c840ddce69dc15a7
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install MinGW
+        run: sudo apt-get update && sudo apt-get install -y gcc-mingw-w64-i686
+
+      - name: Build wsock32.dll
+        run: make -C shim install
+
+      - name: Check the DLL is a 32-bit Windows DLL
+        run: file hlsw/wsock32.dll | tee /dev/stderr | grep -qE "PE32 executable.*DLL.*(80386|i386)"
+
+      - name: Package
+        run: |
+          mkdir -p dist/HLSW-Fixes
+          cp -r hlsw README.md dist/HLSW-Fixes/
+          (cd dist && zip -qr HLSW-Fixes.zip HLSW-Fixes)
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HLSW-Fixes
+          path: dist/HLSW-Fixes.zip
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: HLSW-Fixes
+
+      - name: Fetch the HLSW installer
+        run: |
+          curl -fsSL -o "$INSTALLER_NAME" "$INSTALLER_URL"
+          echo "$INSTALLER_SHA256  $INSTALLER_NAME" | sha256sum -c -
+
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" HLSW-Fixes.zip "$INSTALLER_NAME" \
+            --repo "$GITHUB_REPOSITORY" --draft --generate-notes --title "$GITHUB_REF_NAME"
