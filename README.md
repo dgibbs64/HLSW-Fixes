@@ -77,15 +77,15 @@ Updated Source servers now reply to a server info query with a challenge number 
 
 To troubleshoot, create an empty file called `wsock32_a2s.log` next to `hlsw.exe` to log each challenge it answers, or `wsock32_a2s_verbose.log` to log every packet as well.
 
-The source is in the `shim` directory. It builds with mingw-w64 on Linux: `cd shim && make install`.
+The source is in the `shim` directory. It builds with mingw-w64 on Linux: `cd shim && make install`. GitHub Actions builds it on every push and pull request.
 
 # Install
 
-1. Download this project <a href="https://github.com/dgibbs64/hlsw-fixes/archive/master.zip">here</a>.
+1. Download `HLSW-Fixes.zip` from the <a href="https://github.com/dgibbs64/HLSW-Fixes/releases/latest">latest release</a>.
 
 2. Unzip the archive.
 
-3. Make sure you have HLSW v1.4.0.5 installed (`hlsw_1_4_0_5_setup.exe` is included).
+3. Make sure you have HLSW v1.4.0.5 installed. If you don't, `hlsw_1_4_0_5_setup.exe` is attached to the same release.
 
 4. Copy the contents of the hlsw directory to your HLSW directory, usually `C:\Program Files (x86)\HLSW`.
 
