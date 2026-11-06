@@ -73,11 +73,19 @@ I stumbled across these posted that related to this issue. They resolved the pro
 
 * Fixes Source servers showing as Timeout after Valve added a challenge to A2S_INFO queries (2020/2021).
 
-Updated Source servers now reply to a server info query with a challenge number and only answer once the query is sent again with that number attached. HLSW does not know about this, so those servers stay on Timeout. The `wsock32.dll` in the hlsw directory sits between HLSW and Windows networking and resends the query with the challenge for it. Nothing else about HLSW changes. To remove it, delete `wsock32.dll` from your HLSW directory.
+Updated Source servers now reply to a server info query with a challenge number and only answer once the query is sent again with that number attached. HLSW does not know about this, so those servers stay on Timeout. The `wsock32.dll` in the hlsw directory sits between HLSW and Windows networking and resends the query with the challenge for it. To remove it, delete `wsock32.dll` from your HLSW directory.
 
 To troubleshoot, create an empty file called `wsock32_a2s.log` next to `hlsw.exe` to log each challenge it answers, or `wsock32_a2s_verbose.log` to log every packet as well.
 
 The source is in the `shim` directory. It builds with mingw-w64 on Linux: `cd shim && make install`. GitHub Actions builds it on every push and pull request.
+
+* Fixes newer Steam games showing as Half-Life servers.
+
+Games with a Steam app ID above 65535 (Fistful of Frags, Valheim, V Rising and most newer games) report an app ID of 0 in the old field HLSW reads, so HLSW files them under Half-Life. The same `wsock32.dll` reads the full app ID from the reply and passes HLSW a value it treats as a Half-Life 2 game, so the server shows under the right game name. Sven Co-op is left as it is, since HLSW already knows it as a Half-Life mod.
+
+* Adds Valheim, Project Zomboid, Unturned, V Rising, Insurgency: Sandstorm and Mordhau.
+
+HLSW allows at most 50 Half-Life 2 games, so six entries with no servers left (Archeblade, CSPromod, The Hidden, HL2 CTF, Starbound and Don't Starve Together) are commented out in `Games.cfg` to make room.
 
 # Install
 
