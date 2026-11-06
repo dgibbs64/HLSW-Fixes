@@ -141,9 +141,52 @@ static void on_send(const char *api, SOCKET s, const struct sockaddr *to, const 
     LeaveCriticalSection(&lock);
 }
 
-static int on_recv(const char *api, SOCKET s, const struct sockaddr *from, const char *buf, int n)
+static int skip_str(const unsigned char *b, int n, int i)
 {
-    const unsigned char *b = (const unsigned char *)buf;
+    while (i < n && b[i])
+        i++;
+    return i < n ? i + 1 : -1;
+}
+
+static void fix_appid(unsigned char *b, int n)
+{
+    int i = 6;
+    for (int k = 0; k < 4 && i >= 0; k++)
+        i = skip_str(b, n, i);
+    if (i < 0 || i + 9 > n)
+        return;
+    int short_at = i;
+    if (b[i] || b[i + 1])
+        return;
+    i = skip_str(b, n, i + 9);
+    if (i < 0 || i >= n)
+        return;
+    unsigned char edf = b[i++];
+    if (!(edf & 0x01))
+        return;
+    if (edf & 0x80)
+        i += 2;
+    if (edf & 0x10)
+        i += 8;
+    if (edf & 0x40)
+        i = skip_str(b, n, i + 2);
+    if (i >= 0 && (edf & 0x20))
+        i = skip_str(b, n, i);
+    if (i < 0 || i + 8 > n)
+        return;
+    DWORD appid = b[i] | (b[i + 1] << 8) | (b[i + 2] << 16);
+    if (appid < 200 || appid == 225840 || appid == 276060)
+        return;
+    USHORT v = appid <= 0xFFFF ? (USHORT)appid : 215;
+    b[short_at] = v & 0xFF;
+    b[short_at + 1] = v >> 8;
+    if (verbose)
+        logmsg("A2S_INFO appid 0 rewritten to %u (game appid %lu)", v, (unsigned long)appid);
+}
+
+static int on_recv(const char *api, SOCKET s, const struct sockaddr *from, char *buf, int n)
+{
+    unsigned char *b = (unsigned char *)buf;
     logpkt(api, from, b, n);
     if (!from || from->sa_family != AF_INET || !is_header(b, n))
         return 0;
@@ -152,6 +195,8 @@ static int on_recv(const char *api, SOCKET s, const struct sockaddr *from, const
     DWORD now = GetTickCount();
 
     if (b[4] == 0x49 || b[4] == 0x6D) {
+        if (b[4] == 0x49)
+            fix_appid(b, n);
         EnterCriticalSection(&lock);
         pending_t *p = find_slot(s, sin->sin_addr.s_addr, sin->sin_port, 0);
         if (p)
