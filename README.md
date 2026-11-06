@@ -5,43 +5,53 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 # Adds Support for New Servers
 
 * 7 Days to Die
+* Abiotic Factor
 * ARK: Survival Evolved
 * Arma 3
-* Blade Symphony
+* Barotrauma
 * Black Mesa: Deathmatch
 * BrainBread 2
 * Chivalry: Medieval Warfare
 * Codename Cure
 * Contagion
+* Core Keeper
 * Counter Strike: Global Offensive
 * Day of Infamy
+* DayZ
 * Dota 2
-* Double Action: Boogaloo
 * Dystopia
 * Empires
+* Empyrion - Galactic Survival
 * Fistful of Frags
-* GoldenEye: Source
 * Homefront
 * Hurtworld
+* Icarus
 * Insurgency
-* Just Cause 2
+* Insurgency: Sandstorm
 * Killing Floor 2
 * Medieval Engineers
+* Miscreated
+* Mordhau
+* Myth of Empires
 * Natural Selection 2
 * NEOTOKYO
 * No More Room in Hell
 * Nuclear Dawn
 * Pirates, Knights & Knights II
+* Project Zomboid
 * Rust
 * Serious Sam 3
 * Serious Sam HD
 * Sniper Elite v2
-* Sniper Elite 3
+* Sons of the Forest
+* Soulmask
 * Space Engineers
-* Squad
+* Squad 44
 * Sven Co-op
-* Starbound
-* The Ship
+* The Front
+* Unturned
+* V Rising
+* Valheim
 * War of the Roses
 
 Note: not all of these may be fully working. HLSW will detect the server, but rcon may not work. Source engine games should work, others may not (it's worth testing and letting me know).
@@ -83,9 +93,9 @@ The source is in the `shim` directory. It builds with mingw-w64 on Linux: `cd sh
 
 Games with a Steam app ID above 65535 (Fistful of Frags, Valheim, V Rising and most newer games) report an app ID of 0 in the old field HLSW reads, so HLSW files them under Half-Life. The same `wsock32.dll` reads the full app ID from the reply and passes HLSW a value it treats as a Half-Life 2 game, so the server shows under the right game name. Sven Co-op is left as it is, since HLSW already knows it as a Half-Life mod.
 
-* Adds Valheim, Project Zomboid, Unturned, V Rising, Insurgency: Sandstorm and Mordhau.
+* Updates the Half-Life 2 game list to games that still have servers.
 
-HLSW allows at most 50 Half-Life 2 games, so six entries with no servers left (Archeblade, CSPromod, The Hidden, HL2 CTF, Starbound and Don't Starve Together) are commented out in `Games.cfg` to make room.
+HLSW allows at most 50 Half-Life 2 games. The list was chosen by live server count on the Steam master server in November 2026. Games with almost no servers left (for example The Ship, Squad, Blade Symphony, GoldenEye: Source and Just Cause 2) are commented out in `Games.cfg` to make room. To bring one back, uncomment it and comment out another, so no more than 50 are active.
 
 # Install
 
