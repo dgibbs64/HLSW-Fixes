@@ -5,43 +5,53 @@ An unofficial patch to HLSW that adds a few fixes and more supported servers.
 # Adds Support for New Servers
 
 * 7 Days to Die
+* Abiotic Factor
 * ARK: Survival Evolved
 * Arma 3
-* Blade Symphony
+* Barotrauma
 * Black Mesa: Deathmatch
 * BrainBread 2
 * Chivalry: Medieval Warfare
 * Codename Cure
 * Contagion
+* Core Keeper
 * Counter Strike: Global Offensive
 * Day of Infamy
+* DayZ
 * Dota 2
-* Double Action: Boogaloo
 * Dystopia
 * Empires
+* Empyrion - Galactic Survival
 * Fistful of Frags
-* GoldenEye: Source
 * Homefront
 * Hurtworld
+* Icarus
 * Insurgency
-* Just Cause 2
+* Insurgency: Sandstorm
 * Killing Floor 2
 * Medieval Engineers
+* Miscreated
+* Mordhau
+* Myth of Empires
 * Natural Selection 2
 * NEOTOKYO
 * No More Room in Hell
 * Nuclear Dawn
 * Pirates, Knights & Knights II
+* Project Zomboid
 * Rust
 * Serious Sam 3
 * Serious Sam HD
 * Sniper Elite v2
-* Sniper Elite 3
+* Sons of the Forest
+* Soulmask
 * Space Engineers
-* Squad
+* Squad 44
 * Sven Co-op
-* Starbound
-* The Ship
+* The Front
+* Unturned
+* V Rising
+* Valheim
 * War of the Roses
 
 Note: not all of these may be fully working. HLSW will detect the server, but rcon may not work. Source engine games should work, others may not (it's worth testing and letting me know).
@@ -73,11 +83,19 @@ I stumbled across these posted that related to this issue. They resolved the pro
 
 * Fixes Source servers showing as Timeout after Valve added a challenge to A2S_INFO queries (2020/2021).
 
-Updated Source servers now reply to a server info query with a challenge number and only answer once the query is sent again with that number attached. HLSW does not know about this, so those servers stay on Timeout. The `wsock32.dll` in the hlsw directory sits between HLSW and Windows networking and resends the query with the challenge for it. Nothing else about HLSW changes. To remove it, delete `wsock32.dll` from your HLSW directory.
+Updated Source servers now reply to a server info query with a challenge number and only answer once the query is sent again with that number attached. HLSW does not know about this, so those servers stay on Timeout. The `wsock32.dll` in the hlsw directory sits between HLSW and Windows networking and resends the query with the challenge for it. To remove it, delete `wsock32.dll` from your HLSW directory.
 
 To troubleshoot, create an empty file called `wsock32_a2s.log` next to `hlsw.exe` to log each challenge it answers, or `wsock32_a2s_verbose.log` to log every packet as well.
 
 The source is in the `shim` directory. It builds with mingw-w64 on Linux: `cd shim && make install`. GitHub Actions builds it on every push and pull request.
+
+* Fixes newer Steam games showing as Half-Life servers.
+
+Games with a Steam app ID above 65535 (Fistful of Frags, Valheim, V Rising and most newer games) report an app ID of 0 in the old field HLSW reads, so HLSW files them under Half-Life. The same `wsock32.dll` reads the full app ID from the reply and passes HLSW a value it treats as a Half-Life 2 game, so the server shows under the right game name. Sven Co-op is left as it is, since HLSW already knows it as a Half-Life mod.
+
+* Updates the Half-Life 2 game list to games that still have servers.
+
+HLSW allows at most 50 Half-Life 2 games. The list was chosen by live server count on the Steam master server in November 2026. Games with almost no servers left (for example The Ship, Squad, Blade Symphony, GoldenEye: Source and Just Cause 2) are commented out in `Games.cfg` to make room. To bring one back, uncomment it and comment out another, so no more than 50 are active.
 
 # Install
 
